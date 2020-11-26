@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import getPlayers from '../../helpers/data/playerData';
+import { getPlayers } from '../../helpers/data/playerData';
 import PlayerCard from '../Cards/PlayerCard';
 
 export default class FullTeam extends Component {
@@ -23,9 +23,12 @@ export default class FullTeam extends Component {
     const { players } = this.state;
 
     return (
-        <div className="d-flex flex-wrap">
+        <>
+        <h1>Nashville Predators Roster</h1>
+        <div className="d-flex flex-wrap justify-content-center">
             {players.map((player) => <PlayerCard playerData={player}/>)}
         </div>
+        </>
     );
   }
 }

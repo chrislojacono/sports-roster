@@ -19,4 +19,14 @@ const getPlayers = () => new Promise((resolve, reject) => {
     .catch((error) => reject(error));
 });
 
-export default getPlayers;
+const createPlayer = (object) => new Promise((resolve, reject) => {
+  axios.post(`${baseUrl}/team.json`, object)
+    .then((response) => {
+      axios.patch(`${baseUrl}/team/${response.data.name}.json`, { firebaseKey: response.data.name }).then(resolve);
+    }).catch((error) => reject(error));
+});
+
+export {
+  getPlayers,
+  createPlayer,
+};
