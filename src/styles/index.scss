@@ -3,7 +3,11 @@
 @import 'variables';
 @import '_cards.scss';
 
-body {
-  background-color: #011840;
+.App {
+  background-color:#011840;
   text-align: center;
+  font-family: "Times New Roman", Times, serif;
+}
+body{
+  font-family: "Lucida Console", Courier, monospace;
 }
