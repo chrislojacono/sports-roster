@@ -3,6 +3,7 @@ import { getPlayers, deletePlayer } from '../../helpers/data/playerData';
 import PlayerCard from '../Cards/PlayerCard';
 import AppModal from '../AppModal';
 import PlayerForm from '../Forms';
+import predslogo from './logo2.jpeg';
 
 export default class FullTeam extends Component {
   state = {
@@ -32,12 +33,15 @@ export default class FullTeam extends Component {
 
     return (
         <>
-        <h1>Nashville Predators Roster</h1>
-        <AppModal title={'Add Player'} buttonLabel={'Add Player'}>
+        <h1 className="predsHeader">Nashville Predators Roster</h1>
+        <img className="logoHeader" src={predslogo} alt="preds logo"></img>
+        <div className="m-3">
+        <AppModal btnColor={'success'} title={'Add Player'} buttonLabel={'Add Player'}>
             <PlayerForm onUpdate={this.getThePlayers}/>
         </AppModal>
+        </div>
         <div className="d-flex flex-wrap justify-content-center">
-            {players.map((player) => <PlayerCard playerData={player} onUpdate={this.getThePlayers} deletePlayer={this.deletePlayer}/>)}
+            {players.map((player) => <PlayerCard playerData={player} key={player.firebaseKey} onUpdate={this.getThePlayers} deletePlayer={this.deletePlayer}/>)}
         </div>
         </>
     );

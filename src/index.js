@@ -5,6 +5,8 @@ import 'semantic-ui-css/semantic.min.css';
 import App from './components/App';
 import reportWebVitals from './reportWebVitals';
 
+document.body.style = 'background: #011840;';
+
 ReactDOM.render(
   <React.StrictMode>
     <App />
