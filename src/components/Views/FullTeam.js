@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { getPlayers } from '../../helpers/data/playerData';
+import { getPlayers, deletePlayer } from '../../helpers/data/playerData';
 import PlayerCard from '../Cards/PlayerCard';
 import AppModal from '../AppModal';
 import PlayerForm from '../Forms';
@@ -21,6 +21,12 @@ export default class FullTeam extends Component {
     });
   };
 
+  deletePlayer = (firebaseKey) => {
+    deletePlayer(firebaseKey).then(() => {
+      this.getThePlayers();
+    });
+  }
+
   render() {
     const { players } = this.state;
 
@@ -31,7 +37,7 @@ export default class FullTeam extends Component {
             <PlayerForm onUpdate={this.getThePlayers}/>
         </AppModal>
         <div className="d-flex flex-wrap justify-content-center">
-            {players.map((player) => <PlayerCard playerData={player}/>)}
+            {players.map((player) => <PlayerCard playerData={player} onUpdate={this.getThePlayers} deletePlayer={this.deletePlayer}/>)}
         </div>
         </>
     );

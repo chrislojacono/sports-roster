@@ -1,5 +1,6 @@
 import React from 'react';
 import AppModal from '../AppModal';
+import PlayerForm from '../Forms';
 
 export default function PlayerCard({ playerData, deletePlayer, onUpdate }) {
   return (
@@ -14,9 +15,8 @@ export default function PlayerCard({ playerData, deletePlayer, onUpdate }) {
       </a>
 
       <p className='card-text'>{playerData.position}</p>
-      <AppModal buttonLabel={'Edit Pin'} btnColor={'info'} title={'Edit Pin'}>
-        {/* <PinForm pin={playerData} onUpdate={onUpdate} /> */}
-        Test
+      <AppModal buttonLabel={'Edit Player'} btnColor={'info'} title={'Edit Player'}>
+        <PlayerForm player={playerData} onUpdate={onUpdate} />
       </AppModal>
       <button
         onClick={() => {
@@ -24,7 +24,7 @@ export default function PlayerCard({ playerData, deletePlayer, onUpdate }) {
         }}
         className='btn btn-dark delete-board board-buttons'
       >
-        <i className='far fa-trash-alt'></i> Delete Pin
+        <i className='far fa-trash-alt'></i> Delete Player
       </button>
     </div>
   );
