@@ -1,7 +1,43 @@
-.img-container{
-    height: 300px;
-    width: 300px;
-    background-size: cover;
-    background-position: center;
-    object-fit: contain;
+.img-container {
+  height: 300px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+  // object-fit: contain;
+}
+.card-title {
+  color: white;
+  font-size: 25px;
+  background-color: black;
+  border-radius: 3px;
+}
+.btn-info {
+  width: 100%;
+}
+
+.logoHeader {
+  border-radius: 20px;
+}
+.predsHeader {
+  color: #ffb915;
+  font-size: 60px;
+  width: 50%;
+  margin: 0 auto;
+  font-family: 'Times New Roman', Times, serif;
+  text-shadow: white 1px 1px;
+}
+.card {
+  font-family: 'Times New Roman', Times, serif;
+  -webkit-box-shadow: 3px 2px 7px 3px rgba(224,224,224,0.67); 
+  box-shadow: 3px 2px 7px 3px rgba(224,224,224,0.67);
+  
+}
+
+.login {
+  margin-top: 250px;
+}
+.logout {
+  position: fixed;
+  top: 0px;
+  right: 0px;
 }
