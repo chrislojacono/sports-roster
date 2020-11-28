@@ -1,31 +1,40 @@
-.img-container{
-    height: 300px;
-    width: 300px;
-    background-size: cover;
-    background-position: center;
-    // object-fit: contain;
+.img-container {
+  height: 300px;
+  width: 300px;
+  background-size: cover;
+  background-position: center;
+  // object-fit: contain;
 }
-.card-title{
-    color: white;
-    font-size: 25px;
-    background-color: black;
-    border-radius: 3px;
+.card-title {
+  color: white;
+  font-size: 25px;
+  background-color: black;
+  border-radius: 3px;
 }
-.btn-info{
-    width: 100%;
+.btn-info {
+  width: 100%;
 }
 
-.logoHeader{
-    border-radius: 20px;
+.logoHeader {
+  border-radius: 20px;
 }
-.predsHeader{
-    color: #FFB915;
-    font-size: 60px;
-    width: 50%;
-    margin: 0 auto;
-    font-family: "Times New Roman", Times, serif;
-    text-shadow: white 1px 1px;
+.predsHeader {
+  color: #ffb915;
+  font-size: 60px;
+  width: 50%;
+  margin: 0 auto;
+  font-family: 'Times New Roman', Times, serif;
+  text-shadow: white 1px 1px;
 }
-.card{
-  font-family: "Times New Roman", Times, serif;
+.card {
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.login {
+  margin-top: 250px;
+}
+.logout {
+  position: fixed;
+  top: 0px;
+  right: 0px;
 }
